@@ -35,6 +35,8 @@ long long int sub(long long int a, long long int b){
 14와 28에서 14, 이후 14와 7의 최대공약수로 맞춰지겠지만
 결국 마지막에 최대공약수가 맞추어진다면 결국 값을 저장해야한다는거임~~~~
 1차 시도 52퍼에서 막힘
+모든 변수를 long long으로 만든 2차 시도 역시 52퍼에서 막힘
+3차시도, mini의 설정이 안되어있다는 것을 확인 후 수정, 72퍼에서 막힘
 */
 int main(){
     long int N;
@@ -51,11 +53,23 @@ int main(){
         arr[i]= c-b;
         b = c;
        div = Euc(arr[i-1],arr[i]);
-       if(div < mini) mini = div;
+       if(i == 1){ mini = div;}
+       if(div < mini) {
+            mini = Euc(mini,div);
+            //printf("%lld\n", mini);
+        }
     }
+    if (mini == 1){
+        for(long long int i =0 ; i < N-1; i++){
+            count += (arr[i]-1)/mini;
+        }    
+    } else{
     for(long long int i =0 ; i < N-1; i++){
-        count += arr[i]/mini -1;
+            count += arr[i]/mini -1;
+        }
     }
+    
+    
     printf("%lld", count);
 
 }
