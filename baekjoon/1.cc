@@ -15,17 +15,18 @@ void ask(int N, int count){
         cout << "그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\"\n";
     }
     if(N>0) {
-        ask(--N,count);
+        ask(N-1,count);
+        
     }
     if(N==0) {
         for(int i=0; i<count; i++)cout << "____";
         cout << "\"재귀함수는 자기 자신을 호출하는 함수라네\"" <<"\n";
         for(int i=0; i<count-N; i++) cout << "____";
-        cout<<"\"라고 답변하였지.\"\n";
+        cout<<"라고 답변하였지.\n";
     }
     if(N!=0){
-        for(int i=0; i<count-N-1; i++) cout << "____";
-        cout<<"\"라고 답변하였지.\"\n";
+        for(int i=0; i<count-N; i++) cout << "____";
+        cout<<"라고 답변하였지.\n";
     }   
    
 }
