@@ -1,0 +1,55 @@
+.hidden {
+    display: none;
+}
+
+#greeting{
+    font-size: 40px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#weather{
+    font-size: 30px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#clock{
+    font-size: 40px;
+    text-align: center;
+    border: 2px solid black;
+
+}
+
+#todo-form, #todo-list{
+    text-align: center;
+    font-size: larger;
+}
+#todo-form input{
+    font-size: 20px;
+}
+
+#login-form input{
+    font-size: 20px;
+}
+#login-form{
+    text-align: center;
+    font-size: 30px;
+}
+#todo-list li button {
+    font-size: 30px;
+    padding: 0;
+    border: none;       
+    background: none;   
+    cursor: pointer;    
+}
+
+
+.bg-image {
+    position: fixed;       
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;          
+    z-index: -1;         
+}
